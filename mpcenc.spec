@@ -9,9 +9,6 @@ Group:		Libraries
 Source0:	http://files2.musepack.net/source/%{_subname}-%{version}.tar.bz2
 # Source0-md5:	eb3e6b64b1f7d68aaeb04e39936d87fb
 URL:		http://www.musepack.net/
-BuildRequires:	automake
-BuildRequires:	autoconf
-BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -57,4 +54,4 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 #%doc AUTHORS ChangeLog CHANGES NEWS 
 %attr(755,root,root) %{_bindir}/*
-%{_docdir}/%{name}-%{version}/*
+%{_docdir}/%{name}-%{version}
