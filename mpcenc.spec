@@ -37,22 +37,22 @@ objêty patentami kod.
 
 %build
 %{__make} \
-       CFLAGS="%{rpmcflags}" \
-       LDFLAGS="%{rpmldflags}"
+	CC="%{__cc}" \
+	CFLAGS="%{rpmcflags}" \
+	LDFLAGS="%{rpmldflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_bindir} \
 	$RPM_BUILD_ROOT%{_docdir}/%{name}-%{version}
 
-cp mppenc replaygain $RPM_BUILD_ROOT%{_bindir}
-cp doc/AUTHORS doc/ChangeLog doc/CHANGES doc/NEWS $RPM_BUILD_ROOT%{_docdir}/%{name}-%{version}
+install mppenc replaygain $RPM_BUILD_ROOT%{_bindir}
+install doc/AUTHORS doc/CHANGES doc/TODO README $RPM_BUILD_ROOT%{_docdir}/%{name}-%{version}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-#%doc AUTHORS ChangeLog CHANGES NEWS
 %attr(755,root,root) %{_bindir}/*
 %{_docdir}/%{name}-%{version}
