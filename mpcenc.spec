@@ -2,7 +2,7 @@ Summary:	Musepack encoder
 Summary(pl):	Narzêdzie do kodowania formatu musepack
 Name:		mpcenc
 Version:	1.15v
-Release:	0.1
+Release:	1
 License:	BSD
 Group:		Libraries
 Source0:	http://files2.musepack.net/source/mpcsv7-src-%{version}.tar.bz2
