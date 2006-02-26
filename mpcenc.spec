@@ -3,7 +3,7 @@ Summary(pl):	Narzêdzie do kodowania formatu musepack
 Name:		mpcenc
 Version:	1.15v
 Release:	1
-License:	BSD
+License:	LGPL
 Group:		Libraries
 Source0:	http://files2.musepack.net/source/mpcsv7-src-%{version}.tar.bz2
 # Source0-md5:	eb3e6b64b1f7d68aaeb04e39936d87fb
