@@ -9,6 +9,7 @@ Source0:	http://files2.musepack.net/source/mpcsv7-src-%{version}.tar.bz2
 # Source0-md5:	eb3e6b64b1f7d68aaeb04e39936d87fb
 URL:		http://www.musepack.net/
 BuildRequires:	nasm
+Requires:	mppdec
 ExclusiveArch:	%{ix86}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
