@@ -1,5 +1,5 @@
 Summary:	Musepack encoder
-Summary(pl):	Narzêdzie do kodowania formatu musepack
+Summary(pl.UTF-8):   NarzÄ™dzie do kodowania formatu musepack
 Name:		mpcenc
 Version:	1.15v
 Release:	1
@@ -23,15 +23,15 @@ but since 1997 it has rapidly developed and vastly improved and is now
 at an advanced stage in which it contains heavily optimized and
 patentless code.
 
-%description -l pl
-Ten program obs³uguje kodowanie formatu MPC, który jest formatem
-kompresji d¼wiêku z naciskiem na wysok± jako¶æ. Nie jest bezstratny,
-ale jest zaprojektowany dla przezroczysto¶ci, tak, ¿e nie mo¿na
-us³yszeæ ró¿nicy miêdzy oryginalnym plikiem wave a du¿o mniejszym
+%description -l pl.UTF-8
+Ten program obsÅ‚uguje kodowanie formatu MPC, ktÃ³ry jest formatem
+kompresji dÅºwiÄ™ku z naciskiem na wysokÄ… jakoÅ›Ä‡. Nie jest bezstratny,
+ale jest zaprojektowany dla przezroczystoÅ›ci, tak, Å¼e nie moÅ¼na
+usÅ‚yszeÄ‡ rÃ³Å¼nicy miÄ™dzy oryginalnym plikiem wave a duÅ¼o mniejszym
 plikiem MPC. Jest oparty na algorytmach MPEG-1 Layer-2 / MP2, ale od
-1997 roku zosta³ znacznie rozwiniêty i ulepszony, a teraz jest w
-zaawansowanym stadium, w którym zawiera silnie zoptymalizowany i nie
-objêty patentami kod.
+1997 roku zostaÅ‚ znacznie rozwiniÄ™ty i ulepszony, a teraz jest w
+zaawansowanym stadium, w ktÃ³rym zawiera silnie zoptymalizowany i nie
+objÄ™ty patentami kod.
 
 %prep
 %setup -q -n sv7
