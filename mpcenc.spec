@@ -1,5 +1,5 @@
 Summary:	Musepack encoder
-Summary(pl.UTF-8):   Narzędzie do kodowania formatu musepack
+Summary(pl.UTF-8):	Narzędzie do kodowania formatu musepack
 Name:		mpcenc
 Version:	1.15v
 Release:	1
