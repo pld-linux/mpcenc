@@ -1,15 +1,15 @@
 Summary:	Musepack encoder
 Summary(pl.UTF-8):	Narzędzie do kodowania formatu musepack
 Name:		mpcenc
-Version:	1.15v
+Version:	1.16
 Release:	1
 License:	LGPL
 Group:		Libraries
-Source0:	http://files2.musepack.net/source/mpcsv7-src-%{version}.tar.bz2
-# Source0-md5:	eb3e6b64b1f7d68aaeb04e39936d87fb
+Source0:	http://files.musepack.net/source/mppenc-%{version}.tar.bz2
+# Source0-md5:	f1456141283814efcc012cfa15609bc6
 URL:		http://www.musepack.net/
+BuildRequires:	cmake >= 2.2
 BuildRequires:	nasm
-Requires:	mppdec
 ExclusiveArch:	%{ix86}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -34,24 +34,27 @@ zaawansowanym stadium, w którym zawiera silnie zoptymalizowany i nie
 objęty patentami kod.
 
 %prep
-%setup -q -n sv7
+%setup  -q -n mppenc-%{version}
 
 %build
-%{__make} \
+cd src
+%{cmake} \
 	CC="%{__cc}" \
 	CFLAGS="%{rpmcflags}" \
-	LDFLAGS="%{rpmldflags}"
+	LDFLAGS="%{rpmldflags}" \
+	.
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_bindir}
 
-install mppenc replaygain $RPM_BUILD_ROOT%{_bindir}
+install src/mppenc $RPM_BUILD_ROOT%{_bindir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc doc/{AUTHORS,CHANGES,MANUAL.TXT,TODO}
+%doc Changelog
 %attr(755,root,root) %{_bindir}/*
